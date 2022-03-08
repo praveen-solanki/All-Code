@@ -3,11 +3,11 @@ import face_recognition as fr
 import cv2
 import pickle
 
-with open('image.pkl', 'rb') as f:
-    data = pickle.load(f)
-#praveen_image = fr.load_image_file("praveen.jpg")
-praveen_face_encoding = fr.face_encodings(data)[0]
-#praveen_face_encoding = fr.face_encodings(praveen_image)[0]
+#with open('image.pkl', 'rb') as f:
+#   data = pickle.load(f)
+praveen_image = fr.load_image_file("praveen.jpg")
+#praveen_face_encoding = fr.face_encodings(data)[0]
+praveen_face_encoding = fr.face_encodings(praveen_image)[0]
 
 known_face_encondings = [praveen_face_encoding]
 known_face_names = ["praveen"]
